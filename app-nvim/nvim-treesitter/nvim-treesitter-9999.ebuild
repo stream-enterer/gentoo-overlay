@@ -12,6 +12,8 @@ EGIT_REPO_URI="https://github.com/nvim-treesitter/nvim-treesitter.git"
 LICENSE="Apache-2.0"
 SLOT="0"
 
+RDEPEND+=" dev-util/tree-sitter-cli"
+
 NVIM_PLUGIN_HELPFILES="nvim-treesitter"
 
 src_install() {
