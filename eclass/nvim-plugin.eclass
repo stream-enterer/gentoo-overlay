@@ -36,6 +36,14 @@ _NVIM_PLUGIN_DIRS=(
 	keymap lua plugin queries spell syntax
 )
 
+# @FUNCTION: nvim-plugin_src_compile
+# @DESCRIPTION:
+# No-op. Neovim plugins are not compiled. Overrides the default
+# src_compile to prevent Makefiles (typically for tests) from running.
+nvim-plugin_src_compile() {
+	:
+}
+
 # @FUNCTION: nvim-plugin_src_install
 # @DESCRIPTION:
 # Installs plugin files into /usr/share/nvim/site.
@@ -78,4 +86,4 @@ nvim-plugin_pkg_postinst() {
 
 fi
 
-EXPORT_FUNCTIONS src_install pkg_postinst
+EXPORT_FUNCTIONS src_compile src_install pkg_postinst
